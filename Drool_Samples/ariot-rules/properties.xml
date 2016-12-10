@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<database>
+            <name>couchDB</name>
+            <host>localhost</host>
+            <port>5984</port>
+            <dbName>testdb</dbName>
+            <design>test_view</design>
+            <view>test_view</view>
+            <descending>true</descending>
+        </database>
+</config>

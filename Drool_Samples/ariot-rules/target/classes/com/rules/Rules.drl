@@ -1,0 +1,47 @@
+package com.rule;
+
+import com.test_rules.ariot_rules.Product;
+
+rule "Temperature"
+	when
+		productObject: Product(type=="temperature" && reading > 40.0 )
+	then
+		productObject.setAnomely(true);
+	end
+
+rule "Vibration"
+	when
+		productObject: Product(type=="vibration" && reading > 240.0 )
+	then
+		productObject.setAnomely(true);
+	end
+
+
+
+rule Anomely001
+	when
+	productObject: Product(type=="humidity" && reading > 70.0)
+	then
+	productObject.setAnomely(true);
+end
+
+rule Anomely002
+	when
+	productObject: Product(type=="FlowRate" && reading > 340.0)
+	then
+	productObject.setAnomely(true);
+end
+
+rule Anomely001
+	when
+		productObject: Product(type=="humidity" && reading > 70.0)
+	then
+		productObject.setAnomely(true);
+end
+
+rule Anomely002
+	when
+		productObject: Product(type=="FlowRate" && reading > 340.0)
+	then
+		productObject.setAnomely(true);
+end
